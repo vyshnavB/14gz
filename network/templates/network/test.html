@@ -1,0 +1,98 @@
+{% extends "network/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+{% load static %}
+
+<div class="container" style="background-color: #eeeeee;">
+  <div class="row mt-4">
+      <div class="col-md-8 offset-md-2">
+
+
+        <div class="col-lg-6 col-md-6 col-12">
+          <div>
+<h3 style="margin-left: -100px;">topics</h3>
+          {% if results %}
+    {% for result in results %}
+
+    
+    {% if result.intrest_name is not None %}
+    <ul class=" pages-list" style="border: 1px solid red; width: 550px; margin-left: -100px;">
+      
+        <li class="bg-white radius-20">
+            <div class="d-flex align-items-center">
+                
+                <div class="pages-titles" style="text-decoration: none; margin-left: -50px;">
+                    <a href=""  style="text-decoration: none;">
+                    <h3 style="text-decoration: none;color: black;" >{{ result.intrest_name }}</h3> </a>
+                    <!-- <p>108 gizs posted</p> -->
+                   
+                </div>
+            </div>
+
+            <div class="notification">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+              </svg>
+            </div>
+        </li>
+        {% endif %}
+       
+    </ul>
+    {% endfor %}
+        {% else %}
+        <p>No results found.</p>
+        {% endif %} 
+      </div> 
+      
+        <!-- <div class="mt-4">
+
+          {% if results %}
+          {% for result in results %}
+
+                  <h5 >{{ result.intrest_name }}</h5>
+              
+          {% endfor %}
+          {% else %}
+          <p>No results found.</p>
+          {% endif %}
+      </div> -->
+          
+        <div class="mt-4">
+
+          {% if results %}
+          {% for result in results %}
+
+                  <h5 >{{ result.pagename }} </h5>
+              
+          {% endfor %}
+          {% else %}
+          <p>No results found.</p>
+          {% endif %}
+      </div>
+      <div class="mt-4">
+
+        {% if results %}
+        {% for result in results %}
+
+        {% if result.username is not None %}
+                <h5 >{{ result.username }} </h5> {% endif %}
+            
+        {% endfor %}
+        {% else %}
+        <p>No results found.</p>
+        {% endif %}
+    </div>
+  </div>
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
