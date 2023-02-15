@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
 
 :root {
@@ -5,7 +6,7 @@
   --secondary-color: #2D3748;
   --white-color: #ffffff;
   --light-grey: #E8E8E8;
-  --grey: #eeeeee;
+  --grey: #EEEEEE;
   --greydark: #A0A0A0;
   --blue: #0A66C2;
 
@@ -14,7 +15,6 @@
 html {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif !important;
-  
 }
 
 *,
@@ -27,7 +27,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif !important;
-  
 }
 
 a {
@@ -458,7 +457,7 @@ img {
 }
 
 .bg-profile {
-  background: url(../../static/Images/pro-bg.svg);
+  background: url(../images/pro-bg.svg);
   height: 90px;
   width: 100%;
   border-radius: 25px;
@@ -710,105 +709,43 @@ img {
 .blue-text{
   color: var(--blue);
 }
+.scroll-page{
+  overflow-y: scroll;
+  max-height: 835px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
-
-.content p{
-  font-size: 15px;
 }
-.content ul{
+.scroll-page::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+.filter-wrapper{
   display: flex;
-  flex-wrap: wrap;
-  padding: 7px;
-  margin: 12px 0;
-  border-radius: 5px;
-  border: 1px solid #a6a6a6;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
-.content ul  li{
-  color: #333;
-  margin: 4px 3px;
+.filter-wrapper ul{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-wrapper ul li{
   list-style: none;
-  border-radius: 5px;
-  background: #F2F2F2;
-  padding: 5px 8px 5px 10px;
-  border: 1px solid #e3e1e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
 }
-.content ul li i{
-  height: 20px;
-  width: 20px;
-  color: #808080;
-  margin-left: 8px;
-  font-size: 12px;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #dfdfdf;
-  justify-content: center;
+.filter-wrapper .dropdown .btn-secondary{
+  background-color: transparent !important;
+  color: #071B2A;
+  margin: 0;
+
 }
-.content ul input{
-  flex: 1;
-  padding: 5px;
-  border: none;
-  outline: none;
-  font-size: 16px;
+.post-wrappe{
+  background-color: transparent;
 }
 
-
-/* dropdown best filter */
-
-.best-down {
-  position: relative;
-  font-family: Arial;
-}
-        .best-down select {
-  display: none; /*hide original SELECT element: */
-}
-
-.select-selected {
-  background-color: #D9D9D9;
-}
-
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  color: #000;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  border-radius: 10px;
-}
-
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: #D9D9D9;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}

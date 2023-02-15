@@ -379,10 +379,10 @@
                     <div class="tab-content tab-pages" id="myTabContent">
                         <div class="tab-pane fade show active" id="feed-tab-pane" role="tabpanel"
                             aria-labelledby="feed-tab" tabindex="0">
-
+                            <div class="scroll-page">
                             {% for message in messages %}
-<b><span class="star"><small style="color: rgb(52, 129, 201);">{{message}}</small></span></b>
-{% endfor %}
+                         <b><span class="star"><small style="color: rgb(52, 129, 201);">{{message}}</small></span></b>
+                            {% endfor %}
 
 
 
@@ -831,7 +831,7 @@
 
 
 
-
+                        </div>
                         </div>
                         <div class="tab-pane fade" id="about-tab-pane" role="tabpanel" aria-labelledby="about-tab"
                             tabindex="0">
@@ -1049,9 +1049,7 @@
                 </div>
              </form>
         </div>
-        <div class="modal-footer">
-         
-        </div>
+        
       </div>
     </div>
   </div>
