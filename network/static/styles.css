@@ -473,6 +473,27 @@ svg{
 .post-content{
     margin-top: 5px;
 }
+/* .post-image-profile{
+    height: 330px;
+    width: 105%;
+    border-radius: 18px;
+    margin-top: 15px 0;
+    background-size: cover;
+    margin-left: -10px;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+.post-image-com{
+    height: 330px;
+    width: 115%;
+    border-radius: 18px;
+    margin-top: 15px 0;
+    background-size: cover;
+    margin-left: -65px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
 .post-image{
     height: 330px;
     width: 105%;

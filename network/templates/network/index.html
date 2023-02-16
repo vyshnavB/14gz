@@ -33,7 +33,7 @@
                 <div class="post-profilepic" style="background-image: url(/media/{{post.page_id.image}})"></div>
               
                 {% else %}
-                <a href="{% url 'profile' user.id %}">
+                <a href="{% url 'profile' post.creater.id %}">
                 <div class="post-profilepic" style="background-image: url(/media/{{post.creater.profile_pic}})"></div>
                 </a>
                 {% endif %}
@@ -203,7 +203,7 @@
                                         {% endif %}
 
                                         {% if post.status == "sale" %}
-                                        <div class="u-s-m-b-15" style="background-color: #e9e4e4; display: flex; margin-bottom: 10px;border-radius: 10px; margin-top: -15px; width: 103%;" >
+                                        <div class="u-s-m-b-15" style="background-color: #e9e4e4; display: flex; margin-bottom: 10px;border-radius: 10px; margin-top: -15px; width: 105%; margin-left: -10px; " >
                                             <div style="padding: 10px;">
                                               <h6 style="color: rgb(78, 78, 78); font-size: 15px;">{{ post.categories }}</h6>
                                               <h6 style="color: rgb(42, 42, 42);">{{ post.title }}</h6>

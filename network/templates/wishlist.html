@@ -339,7 +339,7 @@
                    <div>
                        <div>
                            {% if post.posts_type == "page_post" %}
-                           <a href=""></a>
+                           <a href="{% url 'pageprofile' wsh.post.page_id.id %}"></a>
                            <div class="post-profilepic" style="background-image: url(/media/{{wsh.post.page_id.image}})"></div>
                          
                            {% else %}
@@ -354,11 +354,11 @@
                                  
                                    {% if wsh.post.posts_type == "page_post" %}
                                   
-                                   <a href="">
+                                   <a href="{% url 'pageprofile' wsh.post.page_id.id %}">
                                        <span><strong>{{wsh.post.page_id.pagename}} </strong></span>
                                    </a>
                                    {% else %}
-                                   <a href="">
+                                   <a href="{% url 'profile' wsh.post.creater.id %}">
                                        <span><strong>{{wsh.post.creater.username}} </strong></span>
                                    </a>
                                    {% endif %}
@@ -463,7 +463,7 @@
                            {% endif %} 
        
        
-                           {% if post.status == "sale" %}
+                           {% if wsh.post.status == "sale" %}
        
                                               
                                              
@@ -485,7 +485,7 @@
                                <div class="post-image-wish" style="background-image: url(../../static/pdffp.jpg);"> <center>click to download</center></div>
                            </a>
        
-                           {% elif post.content_image %}
+                           {% elif wsh.post.content_image %}
        
                            <div class="post-image-wish" style="background-image: url(/media/{{wsh.post.content_image}});"></div>
                             {% else %}
@@ -504,12 +504,20 @@
                         
        
                            {% if wsh.post.status == "sale" %}<br>
-                           <div class="u-s-m-b-15">
-                                             
-       
-                               <button style="background-color:rgba(255, 132, 0, 0.953) ; color: #fff; border:rgba(255, 132, 0, 0.953) ; border-radius: 10px; "  stclass="btn btn--e-brand-b-2" >
-                                    <a  style="color:#fff; border:rgba(255, 132, 0, 0.953) ;" href="{% url 'product_detail' wsh.post.id %}"  class="btn btn--e-brand-b-2">Buy now</a>
-                                   </div></button>
+                           <div class="u-s-m-b-15" style="background-color: #e9e4e4; display: flex; margin-bottom: 10px;border-radius: 10px; margin-top: -40px; width: 105%; margin-left: -40px; " >
+                            <div style="padding: 10px;">
+                              <h6 style="color: rgb(78, 78, 78); font-size: 15px;">{{ wsh.post.categories }}</h6>
+                              <h6 style="color: rgb(42, 42, 42);">{{ wsh.post.title }}</h6>
+                            </div>
+
+
+                            <div class="ml-auto" style="padding: 10px;">
+                                <button  style="background-color:rgba(192, 192, 190, 0.953) ; color: #fff; border:rgba(255, 132, 0, 0.953) ; border-radius: 15px; "  stclass="btn btn--e-brand-b-2" >
+                                     <a  style="color:rgb(10, 10, 10); border:rgba(255, 132, 0, 0.953) ;" href="{% url 'product_detail' wsh.post.id %}"  class="btn btn--e-brand-b-2 ">Get now</a>
+                                    </button>
+                                   </div>
+                            
+                         </div>
        
                           
                            {% endif %}

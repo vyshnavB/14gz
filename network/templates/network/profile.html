@@ -264,7 +264,7 @@
                             <img src="/media/{{username.profile_pic}}" alt="">
                         </div>
                         <div class="pro-info">
-                            <h2>{{ request.user.username }}</h2>
+                            <h2  style="margin-top: 40px;">{{ request.user.username }}</h2>
                             <p>Student</p>
                         </div>
 
@@ -313,9 +313,9 @@
 					<a href="/settings" data-ripple=""></a>
 					{% else %}
                     {% if button_text == "Follow" %}
-                    <a class="btn" data-ripple=""><a class="btn btn btn-primary" href="{% url 'sent_friend_request' username.id   %}" type="submit" style="background-color: #ffc0cb; border: #ffc0cb;">{{button_text}}</a></a>
+                    <a class="btn" data-ripple=""><a class="btn btn btn-primary" href="{% url 'sent_friend_request' username.id   %}" type="submit" style="background-color: #38B6FF; border: #38B6FF;">{{button_text}}</a></a>
 					{% else %}
-                    <a class="btn " data-ripple=""><a class="btn btn btn-primary" href="{% url 'delete_frd' username.id   %}" type="submit" style="background-color: #ffc0cb; border: #ffc0cb;">{{button_text}}</a></a>
+                    <a class="btn " data-ripple=""><a class="btn btn btn-primary" href="{% url 'delete_frd' username.id   %}" type="submit" style="background-color: #38B6FF; border: #38B6FF;">{{button_text}}</a></a>
 					{% endif %}					{% endif %}
                             </div>
                             
@@ -585,7 +585,7 @@
                                                                     {% endif %}
                             
                                                                     {% if post.status == "sale" %}
-                                                                    <div class="u-s-m-b-15" style="background-color: #e9e4e4; display: flex; margin-bottom: 10px;border-radius: 10px; margin-top: -15px; width: 103%;" >
+                                                                    <div class="u-s-m-b-15" style="background-color: #e9e4e4; display: flex; margin-bottom: 10px;border-radius: 10px; margin-top: -15px; width: 105%; margin-left: -10px;" >
                                                                         <div style="padding: 10px;">
                                                                           <h6 style="color: rgb(78, 78, 78); font-size: 15px;">{{ post.categories }}</h6>
                                                                           <h6 style="color: rgb(42, 42, 42);">{{ post.title }}</h6>
@@ -995,7 +995,7 @@
                                 <div class="feed-wrapper">
                                    
                                     <div style="margin-left: 25px;" class="feed-info mr-auto">
-                                        <a style="text-decoration:none; color: black;" href="">
+                                        <a style="text-decoration:none; color: black;" >
                                         <h6 style="text-decoration:none; color: black;" >{{intrests.intrest_name}}</h6>
                                     </a>
                                         <p></p>
