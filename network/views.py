@@ -100,7 +100,7 @@ def article_list_by_tag(request, tag):
 #     slug_field = "slug"
 #     count_hit = True
 
-
+@csrf_exempt
 def login_view(request):
     if request.method == "POST":
 
@@ -127,7 +127,7 @@ def logout_view(request):
 
 
 
-
+@csrf_exempt
 def register(request):
     if request.method == "POST":
         username = request.POST["username"]
