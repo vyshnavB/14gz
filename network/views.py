@@ -48,8 +48,10 @@ def index(request):
     for users in user_following:
         user_following_list.append(users.to_user)
 
+    us=request.user
+        
     for usernames in user_following_list:
-        feed_lists = Post.objects.filter(creater=usernames).order_by("-date_created")
+        feed_lists = Post.objects.filter(creater=usernames).order_by("-date_created") | Post.objects.filter(creater=us).order_by("-date_created")
         feed.append(feed_lists)
 
 

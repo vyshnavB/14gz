@@ -475,11 +475,21 @@ svg{
 }
 .post-image{
     height: 330px;
-    width: 110%;
+    width: 105%;
     border-radius: 18px;
     margin-top: 15px 0;
     background-size: cover;
-    margin-left: -55px;
+    margin-left: -10px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.post-image-wish{
+    height: 330px;
+    width: 105%;
+    border-radius: 18px;
+    margin-top: 15px 0;
+    background-size: cover;
+    margin-left: -40px;
     background-position: center;
     background-repeat: no-repeat;
 }

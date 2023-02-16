@@ -106,7 +106,7 @@
                             <div>
                                 <ul>
                                     <li>
-                                        <a href="{% url 'index' %}" class="active">
+                                        <a href="{% url 'index' %}" >
                                             <span class="material-symbols-outlined">
                                                 home
                                                 </span>
@@ -156,7 +156,7 @@
                                             </a>
                                         </li> -->
                                         <li>
-                                            <a href="{% url 'saved' %}">
+                                            <a href="{% url 'saved' %}" class="active">
                                                 <span class="material-symbols-outlined">
                                                     add
                                                     </span>
@@ -329,13 +329,13 @@
 <div class="col-lg-6 col-md-6 col-12" >
     <div class="scroll-page">
 
-    <div id="app">
+    <div id="app" >
 
         
  
         {% for wsh in wsh %}
                 <!--====== App Content ======-->
-                <div class="post" data-post_id="{{wsh.post.id}}">
+                <div class="post" data-post_id="{{wsh.post.id}}" style="border-radius: 20px;">
                    <div>
                        <div>
                            {% if post.posts_type == "page_post" %}
@@ -447,15 +447,15 @@
        
        <a href="{{ wsh.post.content_image.url }}" download>
                               
-                               <div class="post-image" style="background-image: url(../../static/pdffp.jpg);"> <center>click to download</center></div>
+                               <div class="post-image-wish" style="background-image: url(../../static/pdffp.jpg);"> <center>click to download</center></div>
                            </a>
        
                            {% elif wsh.post.content_image %}
        
-                           <div class="post-image" style="background-image: url(/media/{{wsh.post.content_image}});"></div>
+                           <div class="post-image-wish" style="background-image: url(/media/{{wsh.post.content_image}});"></div>
                             {% else %}
        
-                            <div class="post-image" style="display: none;"></div>
+                            <div class="post-image-wish" style="display: none;"></div>
        
        
        
@@ -482,15 +482,15 @@
        
        <a href="{{ wsh.post.content_image.url }}" download>
                               
-                               <div class="post-image" style="background-image: url(../../static/pdffp.jpg);"> <center>click to download</center></div>
+                               <div class="post-image-wish" style="background-image: url(../../static/pdffp.jpg);"> <center>click to download</center></div>
                            </a>
        
                            {% elif post.content_image %}
        
-                           <div class="post-image" style="background-image: url(/media/{{wsh.post.content_image}});"></div>
+                           <div class="post-image-wish" style="background-image: url(/media/{{wsh.post.content_image}});"></div>
                             {% else %}
        
-                            <div class="post-image" style="display: none;"></div>
+                            <div class="post-image-wish" style="display: none;"></div>
        
        
        
